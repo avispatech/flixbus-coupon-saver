@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flixbus Coupon Manager</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#73bf00">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Flixbus Coupon Manager">
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="tabs">
+      <button class="tab active" data-tab="current">Current</button>
+      <button class="tab" data-tab="archived">Archived</button>
+    </div>
+
+    <div class="content">
+      <div class="coupon-list active" id="current-list"></div>
+      <div class="coupon-list" id="archived-list"></div>
+    </div>
+
+    <button class="add-button" id="add-button">+</button>
+  </div>
+
+  <div class="modal" id="add-modal">
+    <div class="modal-content">
+      <h3>Add Coupons</h3>
+      <textarea id="coupon-input"
+        placeholder="Enter coupon codes (one per line)&#10;Example:&#10;CLAY6XZ78VJ&#10;CLAY67NZNYG"></textarea>
+      <div class="modal-buttons">
+        <button class="modal-button secondary" id="cancel-button">Cancel</button>
+        <button class="modal-button primary" id="save-button">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
